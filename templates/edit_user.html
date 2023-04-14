@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-md-center top">
+    <div class="col-lg-2">
+      <img class="profile-pic" src="{{user.image_url}}" alt="Profile Pic"></img>
+    </div>
+    <div class="col-lg-4">
+      <form action="/users/{{user.id}}/edit", method="POST">
+        <label for="first_name">First Name:</label>
+        <input class="form-control" type="text" name="first_name" value="{{user.first_name}}">
+        <label for="last_name">Last Name:</label>
+        <input class="form-control" type="text" name="last_name" value="{{user.last_name}}">
+        <label for="image_url">Image URL:</label>
+        <input class="form-control" type="url" name="image_url" value="{{user.image_url}}">
+        <input type="submit" class="btn btn-success">
+        <a href="/users" class="btn btn-secondary">Back</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

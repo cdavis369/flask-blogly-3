@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row justify-content-md-center top">
+    <div class="col-lg-2">
+      <img class="img-fluid" src="{{user.image_url}}" alt="Profile Pic" heigh="200"></img>
+    </div>
+    <div class="col-lg-4">
+      <div class="row">
+        <h3 class="col">{{user.full_name}}</h3>
+      </div>
+      <div class="row justify-content-left">
+        <a class="col-lg-2" href="/users"><button id="back">Back</button></a>  
+        <a class="col-lg-2" href="/users/{{user.id}}/edit"><button id="edit_user">Edit</button></a>
+        <a class="col-lg-2" href="/users/{{user.id}}/delete"><button id="delete_user">Delete</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+
+</style>
+{% endblock %}

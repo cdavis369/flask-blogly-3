@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row justify-content-md-center top">
+    <div class="col-lg-5">
+    <form action="/users/new" method="POST">
+      <label for="first_name">First Name</label>
+      <input class="form-control" type="text" placeholder="First Name" name="first_name">
+      <label for="last_name">Last Name</label>
+      <input class="form-control" type="text" placeholder="Last Name" name="last_name">
+      <label for="image_url">Profile Picture</label>
+      <input class="form-control" type="url" placeholder="image url" name="image_url">
+      <input type="submit" class="btn btn-success">
+      <a href="/users" class="btn btn-secondary">Back</a>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

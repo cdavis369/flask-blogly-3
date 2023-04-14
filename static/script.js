@@ -1,0 +1,1 @@
+// $('#create_user').click(window.location.href = '/user_form')
